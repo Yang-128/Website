@@ -1,15 +1,336 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Top 5 Best Video Games - #1</title>
-</head>
-<body>
- <h1 align="Center">
-        #1
-    </h1>
-    <h3>
-        Top 5 Best Video Games
-    </h3>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollow Knight - #5 | Top 5 Video Games</title>
 
-    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: radial-gradient(ellipse at top, #1b2433 0%, #0b0e15 55%, #05060a 100%);
+            color: #e6e9f0;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+            line-height: 1.7;
+        }
+
+        .back {
+            display: inline-block;
+            color: #9fb3d1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .back:hover {
+            color: #ffffff;
+            transform: translateX(-4px);
+        }
+
+        .wrap {
+            max-width: 860px;
+            margin: auto;
+        }
+
+        /* ---------- Hero ---------- */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .knight {
+            width: 110px;
+            height: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 18px rgba(180, 210, 255, 0.35));
+        }
+
+        .rank-badge {
+            display: inline-block;
+            padding: 6px 18px;
+            border: 1px solid #6b7c99;
+            border-radius: 999px;
+            color: #c9d6ea;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(2.4rem, 7vw, 4.2rem);
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #f3f6fb;
+            text-shadow: 0 0 25px rgba(160, 190, 255, 0.35);
+        }
+
+        .tagline {
+            color: #8d9ab3;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* ---------- Quick facts ---------- */
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 14px;
+            margin-bottom: 45px;
+        }
+
+        .fact {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 12px;
+            padding: 16px 18px;
+        }
+
+        .fact span {
+            display: block;
+            color: #7f8ca5;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .fact strong {
+            font-size: 1.05rem;
+            color: #f0f3f8;
+        }
+
+        /* ---------- Sections ---------- */
+        section {
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 30px 32px;
+            margin-bottom: 28px;
+        }
+
+        h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.7rem;
+            color: #dfe8f7;
+            margin-bottom: 14px;
+        }
+
+        section p {
+            color: #b8c2d4;
+            margin-bottom: 14px;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul.reasons {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        ul.reasons li {
+            padding-left: 20px;
+            border-left: 3px solid #5d7bb0;
+            color: #b8c2d4;
+        }
+
+        ul.reasons li b {
+            color: #eef2f8;
+        }
+
+        /* ---------- Ranking ---------- */
+        .ladder {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 18px 0 22px;
+        }
+
+        .rung {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            color: #7f8ca5;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .rung:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .rung .num {
+            font-weight: 800;
+            width: 30px;
+        }
+
+        .rung.current {
+            background: rgba(120, 160, 230, 0.15);
+            border: 1px solid #6f8fc9;
+            color: #ffffff;
+        }
+
+        blockquote {
+            margin-top: 10px;
+            padding: 16px 20px;
+            border-left: 3px solid #a9bde0;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 0 10px 10px 0;
+            color: #cfd8e8;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6b7690;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 500px) {
+            section {
+                padding: 22px 18px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <a href="../Homepage.html" class="back">← Back to the Top 5</a>
+
+        <header>
+            <!-- Simple drawn knight icon (no external image needed) -->
+            <svg class="knight" viewBox="0 0 100 130" aria-hidden="true">
+                <path d="M30 40 C22 25 20 10 26 2 C30 14 34 22 40 30 Z" fill="#f4f6fa"/>
+                <path d="M70 40 C78 25 80 10 74 2 C70 14 66 22 60 30 Z" fill="#f4f6fa"/>
+                <ellipse cx="50" cy="52" rx="26" ry="24" fill="#f4f6fa"/>
+                <ellipse cx="40" cy="54" rx="6" ry="9" fill="#0b0e15"/>
+                <ellipse cx="60" cy="54" rx="6" ry="9" fill="#0b0e15"/>
+                <path d="M26 76 Q50 66 74 76 L80 125 Q50 118 20 125 Z" fill="#1d2433"/>
+            </svg>
+            <div class="rank-badge">Ranked #5</div>
+            <h1>HOLLOW KNIGHT</h1>
+            <p class="tagline">Explore the forgotten kingdom of Hallownest</p>
+        </header>
+
+        <div class="facts">
+            <div class="fact"><span>Developer</span><strong>Team Cherry</strong></div>
+            <div class="fact"><span>Released</span><strong>February 2017</strong></div>
+            <div class="fact"><span>Genre</span><strong>Metroidvania</strong></div>
+            <div class="fact"><span>Platforms</span><strong>PC, Switch, PS, Xbox</strong></div>
+        </div>
+
+        <section>
+            <h2>What is Hollow Knight?</h2>
+            <p>
+                Hollow Knight is a 2D action-adventure game made by Team Cherry, a tiny indie studio
+                from Adelaide, Australia, with only three core members. You play as the Knight, a small,
+                silent bug warrior who comes to the ruined underground kingdom of Hallownest. The
+                kingdom used to be great, but now it is falling apart because of a mysterious
+                infection that has driven its people mad.
+            </p>
+            <p>
+                The game is a "Metroidvania": one huge, connected world that you explore at your own
+                pace. As you find new abilities, like dashing, wall-climbing and double-jumping, you can
+                reach places that were blocked before. Along the way you fight hard enemies and more than
+                40 bosses, meet strange characters, and slowly piece together the sad story of what
+                happened to Hallownest.
+            </p>
+            <p>
+                The art is all hand-drawn, and the music by Christopher Larkin is calm, sad and epic
+                at the same time. Even with all that, the game only cost about $15 at launch, and every
+                expansion was released for free.
+            </p>
+        </section>
+
+        <section>
+            <h2>Why did it go viral?</h2>
+            <ul class="reasons">
+                <li>
+                    <b>Small team, huge game.</b> It started as a small Kickstarter project, but people
+                    were shocked that three developers could make a world this big and polished. Players
+                    often spend 40+ hours just to finish it, and much longer to get 100%.
+                </li>
+                <li>
+                    <b>Word of mouth.</b> It didn't have a big marketing budget. It spread because
+                    players kept recommending it to friends, on Reddit and on YouTube, and it became
+                    known as one of the best indie games ever made.
+                </li>
+                <li>
+                    <b>Hard but fair.</b> The difficulty makes beating a boss feel amazing. Clips of
+                    tough fights, like the Radiance or the Pantheons in the Godmaster update, became a
+                    big part of YouTube and Twitch.
+                </li>
+                <li>
+                    <b>Mystery and lore.</b> The story is hidden in item descriptions, dialogue and
+                    environments, so fans made tons of theory videos trying to explain it.
+                </li>
+                <li>
+                    <b>Speedrunning.</b> Hollow Knight became one of the most popular speedrun games,
+                    with runners finding crazy glitches and shortcuts.
+                </li>
+                <li>
+                    <b>The Silksong meme.</b> The sequel, Hollow Knight: Silksong, was announced in 2019,
+                    and then fans waited years with almost no news. "Any Silksong news?" turned into one of
+                    the biggest memes in gaming. When Silksong finally launched in September 2025, so many
+                    people rushed to buy it that online stores struggled to keep up, and the original
+                    game got a huge new wave of players.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why is it #5 on our list?</h2>
+            <div class="ladder">
+                <a class="rung" href="../BaldursGate3/index.html"><span class="num">01</span> Baldur's Gate 3</a>
+                <a class="rung" href="../RDR2/index.html"><span class="num">02</span> Red Dead Redemption 2</a>
+                <a class="rung" href="../CyberPunk/CyberpunkPage.html"><span class="num">03</span> Cyberpunk 2077</a>
+                <a class="rung" href="../Minecraft/index.html"><span class="num">04</span> Minecraft</a>
+                <div class="rung current"><span class="num">05</span> Hollow Knight</div>
+            </div>
+            <p>
+                Hollow Knight earns its spot in our Top 5 because it proves that a game doesn't need a
+                giant studio or a huge budget to be a masterpiece. Its world, art, music and combat are
+                as good as games made by teams of hundreds of people.
+            </p>
+            <p>
+                So why not higher? The games above it are massive, story-driven experiences with full
+                voice acting, huge open worlds and tons of player choice. Hollow Knight is also very
+                difficult, and its map system can be confusing, which can turn away some new players.
+                It isn't for everyone, but for the people who love it, it's one of the best games
+                they've ever played.
+            </p>
+            <blockquote>
+                "No cost too great." — Hollow Knight is proof that a small team with a big vision can
+                create something unforgettable.
+            </blockquote>
+        </section>
+
+        <footer>
+            <p>© 2026 | The Best 5 Video Games</p>
+        </footer>
+
+    </div>
 </body>
 </html>

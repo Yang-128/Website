@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Best 5 Video Games</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #10101e, #1c1935, #10101e);
+            color: white;
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #a78bfa, #60a5fa, #e879f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            color: #aaa8c5;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            margin-top: 12px;
+            color: #77758f;
+            font-size: 0.9rem;
+        }
+
+        .game-list {
+            max-width: 850px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .game-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 24px 30px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px) scale(1.015);
+            background: rgba(167, 139, 250, 0.13);
+            border-color: #a78bfa;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .rank {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #77758f;
+            min-width: 55px;
+            text-align: center;
+        }
+
+        .game-card:nth-child(1) .rank {
+            color: #facc15;
+        }
+
+        .game-card:nth-child(2) .rank {
+            color: #c0c0c0;
+        }
+
+        .game-card:nth-child(3) .rank {
+            color: #cd7f32;
+        }
+
+        .game-info h2 {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .game-info p {
+            color: #a5a3bd;
+            font-size: 0.9rem;
+        }
+
+        .arrow {
+            margin-left: auto;
+            font-size: 1.5rem;
+            color: #a78bfa;
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover .arrow {
+            transform: translateX(7px);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #77758f;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 35px 15px;
+            }
+
+            .game-card {
+                padding: 20px 16px;
+                gap: 15px;
+            }
+
+            .rank {
+                font-size: 2rem;
+                min-width: 35px;
+            }
+
+            .game-info h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TOP 5 VIDEO GAMES</h1>
+        <p>Creation by Gabriel, Bruno, Yang and Jake.</p>
+        <div class="subtitle">Our group's ultimate gaming rankings</div>
+    </header>
+
+    <main class="game-list">
+
+        <a href="BaldursGate3/index.html" class="game-card">
+            <div class="rank">01</div>
+            <div class="game-info">
+                <h2>Baldur's Gate 3</h2>
+                <p>Rank #1 — The ultimate adventure</p>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="RDR2/index.html" class="game-card">
+            <div class="rank">02</div>
+            <div class="game-info">
+                <h2>Red Dead Redemption 2</h2>
+                <p>Rank #2 — An unforgettable journey</p>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="CyberPunk/CyberpunkPage.html" class="game-card">
+            <div class="rank">03</div>
+            <div class="game-info">
+                <h2>Cyberpunk</h2>
+                <p>Rank #3 — Welcome to Night City</p>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="Minecraft/index.html" class="game-card">
+            <div class="rank">04</div>
+            <div class="game-info">
+                <h2>Minecraft</h2>
+                <p>Rank #4 — Build your own world</p>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="HollowKnight/index.html" class="game-card">
+            <div class="rank">05</div>
+            <div class="game-info">
+                <h2>Hollow Knight</h2>
+                <p>Rank #5 — Explore the forgotten kingdom</p>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+    </main>
+
+    <footer>
+        <p>© 2026 | The Best 5 Video Games</p>
+    </footer>
+
+</body>
+</html>
