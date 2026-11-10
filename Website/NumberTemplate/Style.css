@@ -2,32 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
 body {
-    background-color: #0b0b10; 
-    color: #e0e0e0;            
-    font-family: 'Orbitron', sans-serif; 
+    background-image: url(https://i.pinimg.com/736x/10/cf/06/10cf06a1813df7362e2f67430ceee1b5.jpg);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap:20px;
+    font-family: 'Orbitron', sans-serif;
+    width: 90%;
     max-width 800px;
+    min-height: 400px;
     margin: 40px auto;
     padding: 20px;
-	
 }
 
 
 h1 {
     color: #fcee0a;
     font-size: 100px;
+    min-width:200px;
     text-transform: uppercase;
     text-align: center;
 }
 
 h2 {
     font-size: 50px;
+    min-width 100px;
     color: #00ffcc;
     text-align: left;
 }
 
 p {
+border: 5px solid yellow;
+border-radius: 15px;
+box-sizing: border-box;
+background-color: white;
 font-size: 25px;
     line-height: 1.6;
 text-align: left;
-max-width: 700px;
+min-width: 700px;
  }
