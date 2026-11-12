@@ -42,3 +42,12 @@ font-size: 25px;
 text-align: left;
 min-width: 700px;
  }
+a{
+    border: 5px solid purple;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: yellow;
+    min-width:300px;
+    font-size: 25px;
+    text-align:center;
+}
